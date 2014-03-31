@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<instance name="randominput2.xml">
+	<descriptor>
+		<days value="5"/>
+		<periods_per_day value="6"/>
+		<daily_lectures min="2" max="3"/>
+	</descriptor>
+	<courses>
+		<course id="c0" teacher="t5" lectures="2" min_days="3" students="33" double_lectures="false"/>
+		<course id="c1" teacher="t4" lectures="3" min_days="2" students="25" double_lectures="false"/>
+		<course id="c2" teacher="t2" lectures="6" min_days="4" students="30" double_lectures="false"/>
+		<course id="c3" teacher="t1" lectures="5" min_days="3" students="26" double_lectures="false"/>
+		<course id="c4" teacher="t4" lectures="5" min_days="2" students="60" double_lectures="false"/>
+		<course id="c5" teacher="t5" lectures="6" min_days="4" students="52" double_lectures="true"/>
+		<course id="c6" teacher="t5" lectures="2" min_days="3" students="28" double_lectures="true"/>
+		<course id="c7" teacher="t4" lectures="6" min_days="2" students="29" double_lectures="true"/>
+		<course id="c8" teacher="t6" lectures="4" min_days="4" students="35" double_lectures="true"/>
+		<course id="c9" teacher="t3" lectures="4" min_days="2" students="38" double_lectures="true"/>
+	</courses>
+	<rooms>
+		<room id="r0" size="39" building="1"/>
+		<room id="r1" size="56" building="0"/>
+		<room id="r2" size="22" building="0"/>
+		<room id="r3" size="22" building="0"/>
+		<room id="r4" size="45" building="0"/>
+	</rooms>
+	<curricula>
+		<curriculum id="cur0">
+			<course ref="c4"/>
+			<course ref="c6"/>
+			<course ref="c8"/>
+			<course ref="c0"/>
+			<course ref="c7"/>
+		</curriculum>
+		<curriculum id="cur1">
+			<course ref="c1"/>
+			<course ref="c0"/>
+			<course ref="c5"/>
+			<course ref="c7"/>
+		</curriculum>
+		<curriculum id="cur2">
+			<course ref="c1"/>
+			<course ref="c0"/>
+			<course ref="c8"/>
+			<course ref="c6"/>
+			<course ref="c2"/>
+			<course ref="c7"/>
+		</curriculum>
+		<curriculum id="cur3">
+			<course ref="c8"/>
+			<course ref="c9"/>
+			<course ref="c7"/>
+		</curriculum>
+		<curriculum id="cur4">
+			<course ref="c4"/>
+			<course ref="c1"/>
+			<course ref="c3"/>
+			<course ref="c2"/>
+		</curriculum>
+	</curricula>
+	<constraints>
+		<constraint type="period" course="c6">
+			<timeslot day="2" period="2"/>
+			<timeslot day="1" period="4"/>
+			<timeslot day="0" period="5"/>
+			<timeslot day="3" period="1"/>
+			<timeslot day="1" period="2"/>
+			<timeslot day="2" period="4"/>
+		</constraint>
+		<constraint type="period" course="c0">
+			<timeslot day="3" period="2"/>
+			<timeslot day="0" period="4"/>
+			<timeslot day="4" period="0"/>
+			<timeslot day="2" period="5"/>
+			<timeslot day="0" period="3"/>
+			<timeslot day="2" period="4"/>
+			<timeslot day="4" period="1"/>
+			<timeslot day="4" period="2"/>
+		</constraint>
+		<constraint type="period" course="c8">
+			<timeslot day="1" period="4"/>
+			<timeslot day="0" period="4"/>
+			<timeslot day="1" period="1"/>
+			<timeslot day="3" period="4"/>
+		</constraint>
+		<constraint type="period" course="c9">
+			<timeslot day="3" period="1"/>
+			<timeslot day="2" period="0"/>
+			<timeslot day="1" period="2"/>
+			<timeslot day="1" period="1"/>
+		</constraint>
+		<constraint type="period" course="c7">
+			<timeslot day="0" period="2"/>
+			<timeslot day="2" period="2"/>
+			<timeslot day="1" period="0"/>
+			<timeslot day="4" period="5"/>
+		</constraint>
+		<constraint type="room" course="c9">
+			<room ref="r0"/>
+			<room ref="r3"/>
+			<room ref="r1"/>
+		</constraint>
+		<constraint type="room" course="c7">
+			<room ref="r2"/>
+			<room ref="r0"/>
+			<room ref="r4"/>
+		</constraint>
+		<constraint type="room" course="c4">
+			<room ref="r0"/>
+			<room ref="r3"/>
+		</constraint>
+		<constraint type="room" course="c6">
+			<room ref="r0"/>
+			<room ref="r3"/>
+		</constraint>
+	</constraints>
+</instance>
